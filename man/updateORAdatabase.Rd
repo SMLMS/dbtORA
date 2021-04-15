@@ -9,7 +9,7 @@ With this function user can update database used for ORA. Determining the point 
 time this should be done himself. (E.g., to keep the database untill project is done.)
 The new files will be saved in system.file('extdata', package = 'ORA'). Updating the
 data is only necessary if user updates R to newer version and packages GO.db and 
-org.Hs.eg.db are updated. Timestamp of data provided in the package ORA: 29th January 2020.
+org.Hs.eg.db are updated. Timestamp of data provided in the package ORA: 17th March 2021.
 Function has then to be called every time after restart of R session.
 
 NOTE: Make sure you have permission to write to system.file('extdata', package = 'ORA'),

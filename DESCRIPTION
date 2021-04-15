@@ -1,8 +1,8 @@
 Package: ORA
 Type: Package
 Title: Overrepresentation Analysis
-Version: 1.7.0
-Date: 2020-February-03
+Version: 1.7.1
+Date: 2021-April-15
 Author: Catharina Lippmann, Michael Thrun, Alfred Ultsch
 Maintainer: Sebastian Malkusch <malkusch@med.uni-frankfurt.de>
 Description: Calculation functions for overrepresentation analysis and directed acyclic graph building.

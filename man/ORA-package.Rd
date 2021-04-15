@@ -11,8 +11,8 @@ Calculation functions for overrepresentation analysis and directed acyclic graph
 \tabular{ll}{
 Package: \tab ORA\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2020-02-03\cr
+Version: \tab 1.7.1\cr
+Date: \tab 2020-04-15\cr
 License: \tab GPL \cr
 }
 }
