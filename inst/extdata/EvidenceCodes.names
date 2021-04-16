@@ -1,5 +1,5 @@
 # List of EvidenceCodes that occur in org.Hs.eg.db package with unique Key. 
-# Date: 2021-04-15. 
+# Date: 2020-02-03. 
 # From the documentation of org.Hs.eg.db package: 
 # The Evidence element contains a code indicating what kind of evidence supports the association of 
 # the GO identifier to the Entrez Gene id. Some of the evidence codes in use include: 
@@ -16,7 +16,7 @@
 # IC: inferred by curator 
 #
 #Key	EvidenceCode	
-%	21
+%	20
 1	IEA
 2	EXP
 4	HDA
@@ -26,15 +26,14 @@
 64	IC
 128	IDA
 256	IEP
-512	IGC
-1024	IGI
-2048	IMP
-4096	IPI
-8192	ISA
-16384	ISM
-32768	ISO
-65536	ISS
-131072	NAS
-262144	ND
-524288	RCA
-1048576	TAS
+512	IGI
+1024	IMP
+2048	IPI
+4096	ISA
+8192	ISM
+16384	ISO
+32768	ISS
+65536	NAS
+131072	ND
+262144	RCA
+524288	TAS
