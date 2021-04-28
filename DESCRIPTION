@@ -1,8 +1,8 @@
 Package: ORA
 Type: Package
 Title: Overrepresentation Analysis
-Version: 1.7.2
-Date: 2021-April-15
+Version: 1.7.4
+Date: 2021-April-26
 Author: Catharina Lippmann, Michael Thrun, Alfred Ultsch
 Maintainer: Sebastian Malkusch <malkusch@med.uni-frankfurt.de>
 Description: Calculation functions for overrepresentation analysis and directed acyclic graph building.
@@ -11,7 +11,7 @@ Imports: Matrix, ggm, AnnotationDbi, tools, utils, org.Hs.eg.db, GO.db,
         stats
 LazyLoad: no
 LazyData: no
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, markdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-04-16 06:28:59 UTC; joern
+Packaged: 2021-04-27 12:19:26 UTC; quirin

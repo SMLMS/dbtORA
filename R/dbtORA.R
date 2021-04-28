@@ -48,7 +48,7 @@ PlotExt = 'png'){ #, SuggestParams = FALSE){
 # # #										Importance Threshold. If the calculated importance of a term is smaller than ImpThreshold,
 # # #										the term won't occur in the DAG.
 # PlotExt						String; Default: 'png' 
-#										Extension of the plotfile showing the DAG. One of 'pdf', 'eps' or 'png'.
+#										Extension of the plotfile showing the DAG. One of 'pdf', 'eps', 'svg' or 'png'.
 # # # SuggestParams			Boolean; Default: FALSE
 # # #										Set TRUE if suggestions for PvalueThreshold and MinNrOfGenes should be calculated and used for ORA.
 # # #										Note: If TRUE, ORA will be calculated twice. This will take some time.
@@ -152,11 +152,11 @@ if(is.null(RefSetFileWithExt)){ # RefSet nicht gegeben:
 }else{ # RefSet gegeben!
 	# RefSet einlesen:
 	switch(file_ext(RefSetFileWithExt), 
-		'.names'	= {	NAMES <- ReadNAMES(RefSetFileWithExt, RefSetDirectory)
+		'names'	= {	NAMES <- ReadNAMES(RefSetFileWithExt, RefSetDirectory)
 									RefSet <- NAMES$Key},
-		'.lrn'		= {	LRN <- ReadLRN(RefSetFileWithExt, RefSetDirectory)
+		'lrn'		= {	LRN <- ReadLRN(RefSetFileWithExt, RefSetDirectory)
 									RefSet <- LRN$Key},
-		'.txt'		= {	TXT <- ReadTXT(RefSetFileWithExt, RefSetDirectory)
+		'txt'		= {	TXT <- ReadTXT(RefSetFileWithExt, RefSetDirectory)
 									RefSet <- unname(TXT$Data[,1])},
 		stop('Invalid input format for RefSetFileWithExt!')
 	)#end switch

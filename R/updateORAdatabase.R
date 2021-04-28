@@ -21,6 +21,8 @@ updateORAdatabase <- function(){
 # CCAncestorsSparseMatrix.lrn				Sparse Matrix of CC GOterms and all their ancestors.
 # CCAncestorsSparseMatrix.names			Names of CC GOterms corresponding to CCAncestorsSparseMatrix.
 
+# NOTE: Make sure you have permission to write to specified directory, e.g. execute R with admin rights!
+
 print('Loading packages.')
 
 ##### Lade wichtigste Datenbanken: ####
@@ -35,7 +37,8 @@ GOMFAnc <- AnnotationDbi::as.list(GO.db::GOMFANCESTOR) # Vorfahren in MF fuer DA
 GOCCAnc <- AnnotationDbi::as.list(GO.db::GOCCANCESTOR) # Vorfahren in CC fuer DAG-Struktur
 
 ##### Allgemeine Parameter: #####
-OutDirectory <- system.file('extdata', package = 'ORA')
+OutDirectory <- system.file('extdata', package = 'ORA')  # Get directory via function
+#OutDirectory <- "D:/dbt/ORA/extdata"                     # Set directory hard coded (personal directory structure reasons)
 
 ##########################################################################################
 ## GOAall.lrn ############################################################################
@@ -71,6 +74,7 @@ Data <- sortby(temp2, 1)
 Header <- c('Key',	'AnnNCBI',	'GOtermNr',	'EvidenceKey',	'OntologyNo')
 Comments <- paste0('This file contains infos from "org.Hs.egGO2ALLEGS". \n# From the documentation of the package:\n# org.Hs.egGO2ALLEGS is an R object that provides mappings between a given GO identifier and\n# all of the Entrez Gene identifiers annotated at that GO term OR TO ONE OF ITS CHILD NODES\n# in the GO ontology. Thus, this mapping is much larger and more inclusive than org.Hs.egGO2EG.\n# Last update: ', Sys.Date(),'.')
 # WriteLRN(FileName,Data,Header,Key,DataDefined,OutDirectory,CommentOrDigits);
+print(OutDirectory)
 suppressWarnings(WriteLRN(FileName,Data,Header,Key,c(),OutDirectory,Comments));
 print('Generate updatet files.')
 print('1/18 done.')

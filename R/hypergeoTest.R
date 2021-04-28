@@ -39,7 +39,7 @@ hypergeoTest <- function(ObservedNrOfAnnsInTerm, NrOfAnnotationsInTerm, NrOfGene
 #														ObservedNrOfAnnsInTerm, the log-p-value will be log(P(X<ObservedNrOfAnnsInTerm)) 
 #														respectively the p-value will be P(X<ObservedNrOfAnnsInTerm),
 #														where X is the hypergeometric distributed random variable.
-#														NOTE: In both cases the case P(X==ObservedNrOfAnnsInTerm) is excluded!
+#														NOTE: In both cases the case P(X==ObservedNrOfAnnsInTerm) is included!
 
 # AUTHOR:
 # CL, 19.04.2016
@@ -75,12 +75,12 @@ LogPvalue <- rep(-1, length(eKleinero)) # Initialisieren
 
 # Uppertail
 UpperAnn <- NrOfAnnotationsInTerm[eKleinero]
-UpperObs <- ObservedNrOfAnnsInTerm[eKleinero]-1 # hier Minus eins weil wir nur P(X>x) und nicht P(X>=x) wollen
+UpperObs <- ObservedNrOfAnnsInTerm[eKleinero]-1 # hier Minus eins weil wir nur P(X>=x) wollen, aber P(X>x) berechnet wird.
 UpperGenes <- rep(NrOfGenesInSample, sum(eKleinero))
 UpperUni <- rep(NrOfGenesInUniverse, sum(eKleinero))
 # Lowertail
 LowerAnn <- NrOfAnnotationsInTerm[!eKleinero]
-LowerObs <- ObservedNrOfAnnsInTerm[!eKleinero] # hier kein Minus - es wird standardmaessig P(X<x) berechnet
+LowerObs <- ObservedNrOfAnnsInTerm[!eKleinero] # hier kein Minus - es wird standardmaessig P(X<=x) berechnet
 LowerGenes <- rep(NrOfGenesInSample, sum(!eKleinero))
 LowerUni <- rep(NrOfGenesInUniverse, sum(!eKleinero))
 

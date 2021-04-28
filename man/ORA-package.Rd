@@ -11,8 +11,8 @@ Calculation functions for overrepresentation analysis and directed acyclic graph
 \tabular{ll}{
 Package: \tab ORA\cr
 Type: \tab Package\cr
-Version: \tab 1.7.2\cr
-Date: \tab 2021-04-15\cr
+Version: \tab 1.7.3\cr
+Date: \tab 2021-04-26\cr
 License: \tab GPL \cr
 }
 }
@@ -22,8 +22,8 @@ Catharina Lippmann, Michael Thrun, Alfred Ultsch
 Maintainer: Sebastian Malkusch <malkusch@med.uni-frankfurt.de>
 }
 \references{
-Loetsch, J., Ultsch, A.: Functional abstraction for large Gene Ontology taxonomies, in: Kestler, HA., Binder, H., Schmid, M., Kraus, JM. (eds): Statistical Computing 2012, Ulmer Informatik-Berichte, pp. 6, 2012 (ISSN 0939-5091).\cr
-Loetsch, J., Doehring, A., Mogil, J.S., Arndt, T., Geisslinger, G., Ultsch, A.: Functional genomics of pain in analgesic drug development and therapy, in: Pharmacology & Therapeutics, Volume 139, Issue 1, from pp. 60 to 70, 2013.
+Lotsch, J., Ultsch, A.: Functional abstraction for large Gene Ontology taxonomies, in: Kestler, HA., Binder, H., Schmid, M., Kraus, JM. (eds): Statistical Computing 2012, Ulmer Informatik-Berichte, pp. 6, 2012 (ISSN 0939-5091).\cr
+Lippmann, C., Kringel, D., Ultsch, A., Lotsch, J.:Computational functional genomics-based approaches in analgesic drug discovery and repurposing, in: Pharmacogenomics, 2018 Jun 1;19(9):783-79 <doi:10.2217/pgs-2018-0036>.
 }
 
 \keyword{ORA}

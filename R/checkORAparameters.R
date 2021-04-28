@@ -47,7 +47,7 @@ PlotExt){
 # # # #											Importance Threshold. If the calculated importance of a term is smaller than ImpThreshold,
 # # # #											the term won't occur in the DAG.
 # PlotExt							String;
-#											Extension of the plotfile showing the DAG. One of 'pdf' , 'eps' or 'png'.
+#											Extension of the plotfile showing the DAG. One of 'pdf' , 'eps' , 'svg' or 'png'.
 
 # AUTHOR:
 # CL, 03.03.2016
@@ -84,7 +84,7 @@ KorrekterTyp <- c(rep('character', 7), rep('numeric', 2), rep('logical', 4), 'ch
 DatentypOK <- sum(Datentyp)==length(Datentyp) # Alle TRUE?
 if(!DatentypOK){ # Wenn nicht alle TRUE, gibt die Parameter, die den falschen Typ haben aus.
 	FALSEparam <- which(Datentyp == FALSE)
-	stop('checkORAparameters: Parameter(s) ',paste(names(Datentyp)[FALSEparam], collapse = ', '),' do not have correct type. Has to be of type "', KorrekterTyp[FALSEparam],'". Function stops.')
+	stop('checkORAparameters: Parameter(s) ',paste(names(Datentyp)[FALSEparam], collapse = ', '),' do not have correct type. Has to be of type "', paste(KorrekterTyp[FALSEparam], collapse = ', ') ,'". Function stops.')
 }
 
 ######################################################################################################
@@ -117,8 +117,8 @@ if(!FileOK){
 # Ist RefSetFileWithExt (falls gegeben) ein filename mit einer der zugelassenen Extensions 
 # im Verzeichnis RefSetDirectory?
 if(!is.null(RefSetFileWithExt)){
-	RefSetFileWithExtExt <- file_ext(InFileWithExt)
-	RefSetFileWithExtName <- basename(tools::file_path_sans_ext(InFileWithExt))
+	RefSetFileWithExtExt <- file_ext(RefSetFileWithExt)
+	RefSetFileWithExtName <- basename(tools::file_path_sans_ext(RefSetFileWithExt))
 	RefSetFileWithExtDir <- dirname(InFileWithExt)
 		# Extension von RefSetFileWithExt ok?
 	if(!(RefSetFileWithExtExt %in% c('names', 'lrn', 'txt'))){
@@ -170,8 +170,8 @@ if(MinNrOfGenes < 0){
 
 ######################################################################################################
 # Ist die Extension, die fuer den Plot benutzt werden soll, zulaessig?
-if(!(PlotExt %in% c('png', 'eps', 'pdf'))){
-	stop('checkORAparameters: PlotExt has to be one of "png", "eps" or "pdf". Function stops.')
+if(!(PlotExt %in% c('png', 'eps', 'pdf', 'svg'))){
+	stop('checkORAparameters: PlotExt has to be one of "png", "eps", "svg" or "pdf". Function stops.')
 }
 
 }#end function checkORAparameters

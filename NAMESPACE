@@ -28,5 +28,6 @@ export("termNr")
 export("termpathsHeadlines")
 export("termsAncestors")
 export("updateORAdatabase")
+export("updateORAdatabase2")
 export("WriteORAresults")
  

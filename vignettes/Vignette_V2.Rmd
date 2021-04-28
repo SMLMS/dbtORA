@@ -183,7 +183,7 @@ Set `TRUE` if headlines of the DAG should be marked in yellow colour.
 
   * `PlotExt`:  
 String;
-Extension of the plotfile showing the DAG. One of `'pdf'` , `'eps'` or `'png'`.  
+Extension of the plotfile showing the DAG. One of `'pdf'` , `'eps'`, `'svg'` or `'png'`.  
 
 
 **Author:**  
@@ -260,7 +260,7 @@ Boolean; Default: `TRUE`.
 Set `TRUE` if headlines of the DAG should be marked in yellow colour.
   * `PlotExt`:  
 String; Default: `'png'`.   
-Extension of the plotfile showing the DAG. One of `'pdf'`, `'eps'` or `'png'`.
+Extension of the plotfile showing the DAG. One of `'pdf'`, `'eps'`, `'svg'` or `'png'`.
 
 **Details:**  
 Wrapper function to execute mainly `ORA` and `drawORA`.  
@@ -380,7 +380,7 @@ Adjacency matrices for each ontology and combined sparse matrix.
 * `PlotFileWithExt`:  
 String; Default `'png'`.  
 Name of the file that should be drawn with extension.
-Extension can be one of `'png'`, `'eps'` or `'pdf'`.
+Extension can be one of `'png'`, `'eps'`, `'svg'` or `'pdf'`.
 * `PlotDirectory`:  
 String; Default: current directory.  
 Directory where `PlotFileWithExt` should be saved.
@@ -936,7 +936,7 @@ Adjacency matrix of GO terms where `Adj[i,j]==1` iff `i` is parent of `j`.
 * `GOtermIDs`:  
 GO term IDs, e.g. `"GO:0008150"`.
 * `PlotFile`:  
-Name of the output file including the extension one of `'png'`, `'pdf'`, `'eps'`. (If no extension specified `'png'` is used).
+Name of the output file including the extension one of `'png'`, `'pdf'`, `'eps'`, `'svg'`. (If no extension specified `'png'` is used).
 * `PlotDirectory`:  
 Output directory. Default: `getwd()`.
 * `Significant`:  
@@ -983,7 +983,7 @@ CL
 
 
 **See also:**  
-[`drawDAG`](# drawDAG).
+[`drawORA`](# drawORA).
 
 
 **Example:**  
@@ -1286,6 +1286,7 @@ The new files will be temporary saved in `system.file('extdata', package = 'ORA'
 data is only necessary if user updates R to newer version and packages [`GO.db`](https://bioconductor.org/packages/release/data/annotation/html/GO.db.html) and 
 [`org.Hs.eg.db`](https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html) are updated. Timestamp of data provided in the package ORA: 31 January 2018.
 Function has then to be called every time after restart of R session.
+NOTE: Make sure you have permission to write to the path `system.file('extdata', package = 'ORA')` (e.g. execute R as admin).
 
 **Usage:**  
 `updateORAdatabase()`

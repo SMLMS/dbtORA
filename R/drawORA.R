@@ -50,7 +50,7 @@ drawORA <- function(ORAresults, PlotFileWithExt, PlotDirectory, MarkDetails = TR
 #															
 # PlotFileWithExt					String;
 #													Name of the file that should be drawn with extension.
-#													Extension can be one of 'png', 'eps' or 'pdf'. Default is 'png'.
+#													Extension can be one of 'png', 'eps', 'svg' or 'pdf'. Default is 'png'.
 #
 # OPTIONAL:
 # PlotDirectory						String; Default: current directory
